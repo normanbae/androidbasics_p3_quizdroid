@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Display user score
         display(getString(R.string.your_score_is) + " " + score);
+        Toast.makeText(this, this.getString(R.string.your_score_is) + score, Toast.LENGTH_SHORT).show();
     }
 
     /**
