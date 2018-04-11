@@ -1,0 +1,59 @@
+<resources>
+    <!--Information-->
+    <string name="app_name">QuizDroid</string>
+    <string name="user_name">Name</string>
+    <string name="user_email">Email</string>
+    <string name="user_email_opt_in">Send Email Summary of Results?</string>
+    <string name="user_information">user information</string>
+
+    <!--Questions-->
+    <string name="question_1">question 1</string>
+    <string name="question_2">question 2</string>
+    <string name="question_3">question 3</string>
+    <string name="question_4">question 4</string>
+
+    <string name="question_1_text">What is the latest version of Android?</string>
+    <string name="question_2_text">Which of these are Google\'s latest flagships?</string>
+    <string name="question_3_text">How many major versions of Android have been released as of January 2018?</string>
+    <string name="question_4_text">What is the name of Android\'s mascot?</string>
+
+    <string name="question_1_result">Question 1 Correct?</string>
+    <string name="question_2_result">Question 2 Correct?</string>
+    <string name="question_3_result">Question 3 Correct?</string>
+    <string name="question_4_result">Question 4 Correct?</string>
+
+    <!--Hints-->
+    <string name="hint">hint</string>
+    <string name="hint_1_text">Don\'t dip your phone in milk! Google\'s latest OS? Maybe.</string>
+    <string name="hint_2_text">The Google Nexus phones were discontinued in 2016 with the introduction of the Google Pixel.</string>
+    <string name="hint_3_text">There have been seven desserts that did not get a full number increment.</string>
+    <string name="hint_4_text">Android\'s mascot has two names. Each name borrows a syllable from the OS.</string>
+
+    <!--Answers-->
+    <string name="q1a1">Marshmallow</string>
+    <string name="q1a2">Nougat</string>
+    <string name="q1a3">Oreo</string>
+    <string name="q1a4">Peppermint</string>
+    <string name="q2a1">Nexus 6</string>
+    <string name="q2a2">Pixel 2</string>
+    <string name="q2a3">Pixel 2 Plus</string>
+    <string name="q2a4">Pixel 2XL</string>
+    <string name="q2a5">Nexus 6P</string>
+    <string name="q2a6">Nexus 8</string>
+    <string name="q4a1">Mascot Name</string>
+
+    <!--Other-->
+    <string name="check">check</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Wrong.</string>
+    <string name="submit_answers">submit answers</string>
+    <string name="submit">get my score</string>
+    <string name="sendResults">send results summary</string>
+    <string name="reset">reset score</string>
+    <string name="your_results">Your Results</string>
+    <string name="your_score_is">Your Score Is: </string>
+    <string name="total">Total</string>
+    <string name="thank_you">Thanks for playing!</string>
+
+
+</resources>
