@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="24sp"
+        android:background="@android:color/white"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rest_of_the_app"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.baeinc.normanbae.justjava.MainActivity">
+
+            <!--User Information-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/user_information" />
+
+            <EditText
+                android:id="@+id/name_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:hint="@string/user_name"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/email_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:hint="@string/user_email"
+                android:inputType="textEmailAddress" />
+
+            <!--Question 1-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:text="@string/question_1" />
+
+            <TextView
+                style="@style/QuestionStyle"
+                android:text="@string/question_1_text" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/q1a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onQ1Clicked"
+                    android:text="@string/q1a1" />
+
+                <RadioButton
+                    android:id="@+id/q1a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onQ1Clicked"
+                    android:text="@string/q1a2" />
+
+                <RadioButton
+                    android:id="@+id/q1a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onQ1Clicked"
+                    android:text="@string/q1a3" />
+
+                <RadioButton
+                    android:id="@+id/q1a4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onQ1Clicked"
+                    android:text="@string/q1a4" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/q1_next"
+                    style="@style/AnswerStyle"
+                    android:onClick="checkQ1"
+                    android:text="@string/check"
+                    android:textAllCaps="true" />
+
+                <Button
+                    android:id="@+id/q1_hint"
+                    style="@style/AnswerStyle"
+                    android:onClick="hintQ1"
+                    android:text="@string/hint"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+
+            <!--Question 2-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:text="@string/question_2" />
+
+            <TextView
+                style="@style/QuestionStyle"
+                android:text="@string/question_2_text" />
+
+            <CheckBox
+                android:id="@+id/q2a1"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a1" />
+
+            <CheckBox
+                android:id="@+id/q2a2"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a2" />
+
+            <CheckBox
+                android:id="@+id/q2a3"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a3" />
+
+            <CheckBox
+                android:id="@+id/q2a4"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a4" />
+
+            <CheckBox
+                android:id="@+id/q2a5"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a5" />
+
+            <CheckBox
+                android:id="@+id/q2a6"
+                style="@style/AnswerStyle"
+                android:onClick="onQ2Clicked"
+                android:text="@string/q2a6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/q2_next"
+                    style="@style/AnswerStyle"
+                    android:onClick="checkQ2"
+                    android:text="@string/check"
+                    android:textAllCaps="true" />
+
+                <Button
+                    android:id="@+id/q2_hint"
+                    style="@style/AnswerStyle"
+                    android:onClick="hintQ2"
+                    android:text="@string/hint"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+
+            <!--Question 3-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:text="@string/question_3" />
+
+            <TextView
+                style="@style/QuestionStyle"
+                android:text="@string/question_3_text" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/minus_button_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:onClick="decrement"
+                    android:text="-"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/q3a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/plus_button_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:onClick="increment"
+                    android:text="+"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/q3_next"
+                    style="@style/AnswerStyle"
+                    android:onClick="checkQ3"
+                    android:text="@string/check"
+                    android:textAllCaps="true" />
+
+                <Button
+                    android:id="@+id/q3_hint"
+                    style="@style/AnswerStyle"
+                    android:onClick="hintQ3"
+                    android:text="@string/hint"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <!--Question 4-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:text="@string/question_4" />
+
+            <TextView
+                style="@style/QuestionStyle"
+                android:text="@string/question_4_text" />
+
+            <EditText
+                android:id="@+id/q4a1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:hint="@string/q4a1"
+                android:inputType="textCapWords" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/q4_next"
+                    style="@style/AnswerStyle"
+                    android:onClick="checkQ4"
+                    android:text="@string/check"
+                    android:textAllCaps="true" />
+
+                <Button
+                    android:id="@+id/q4_hint"
+                    style="@style/AnswerStyle"
+                    android:onClick="hintQ4"
+                    android:text="@string/hint"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <!--The End-->
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_marginLeft="16dp"
+                android:text="@string/your_results" />
+
+            <TextView
+                android:id="@+id/score_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/your_score_is"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/submit_answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
+                android:text="@string/submit"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/send_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="resultSummary"
+                android:text="@string/sendResults"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/reset_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="resetAll"
+                android:text="@string/reset"
+                android:textAllCaps="true" />
+
+            <!--To Add
+
+            checkbox before submit button whether or not to email score to you / others
+            share results to social media?
+            submit button will calculate score and toast message + pic?
+            like 'which xyz are you' type quizzes
+
+            selection menu of different quizzes
+
+            make all text into strings, if possible
+
+            fix progress bar to not decrease but only stay at current level or increase
+            until reset
+
+            more detailed email summary
+
+            add other languages
+
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
