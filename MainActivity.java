@@ -38,13 +38,52 @@ public class MainActivity extends AppCompatActivity {
 
     int q3Quantity = 0;
 
+    // Create views
+
+    EditText nameField;
+    EditText emailField;
+    String userName;
+    String userEmail;
+
+    TextView scoreView;
+    TextView quantityTextView;
+    ProgressBar quizProgressBar;
     EditText editMascotName;
+    String q4Answer;
+
+    CheckBox q2a1CheckBox;
+    CheckBox q2a2CheckBox;
+    CheckBox q2a3CheckBox;
+    CheckBox q2a4CheckBox;
+    CheckBox q2a5CheckBox;
+    CheckBox q2a6CheckBox;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initialize views (I like to cast redundancies to help my learning for now)
+
+        nameField = (EditText) findViewById(R.id.name_box);
+        userName = (String) nameField.getText().toString();
+        emailField = (EditText) findViewById(R.id.email_box);
+        userEmail = (String) emailField.getText().toString();
+
+
+        scoreView = (TextView) findViewById(R.id.score_text_view);
+        quantityTextView = (TextView) findViewById(R.id.q3a);
+        quizProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        editMascotName = (EditText) findViewById(R.id.q4a1);
+        q4Answer = (String) editMascotName.getText().toString();
+
+        q2a1CheckBox = (CheckBox) findViewById(R.id.q2a1);
+        q2a2CheckBox = (CheckBox) findViewById(R.id.q2a2);
+        q2a3CheckBox = (CheckBox) findViewById(R.id.q2a3);
+        q2a4CheckBox = (CheckBox) findViewById(R.id.q2a4);
+        q2a5CheckBox = (CheckBox) findViewById(R.id.q2a5);
+        q2a6CheckBox = (CheckBox) findViewById(R.id.q2a6);
 
     }
 
@@ -57,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
      * the score on the screen.
      */
     public void display(String message) {
-        TextView scoreView = (TextView) findViewById(R.id.score_text_view);
         scoreView.setText(message);
     }
 
@@ -91,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
      * button is clicked.
      */
     public void addProgress(int progress) {
-        ProgressBar quizProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
         quizProgressBar.setProgress(progress);
     }
 
@@ -148,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
      * @param isQ3Correct is whether or not the answer to Q3 is correct
      * @param isQ4Correct is whether or not the answer to Q4 is correct
      * @param score       final score
-     * @return            text summary
+     * @return text summary
      */
     private String createQuizResults(String userName, boolean isQ1Correct, boolean isQ2Correct, boolean isQ3Correct, boolean isQ4Correct, float score) {
         String quizResults = getString(R.string.user_name) + ": " + userName;
@@ -168,11 +205,6 @@ public class MainActivity extends AppCompatActivity {
      * button is clicked.
      */
     public void resultSummary(View view) {
-        // Get user name and email
-        EditText nameField = findViewById(R.id.name_box);
-        String userName = nameField.getText().toString();
-        EditText emailField = findViewById(R.id.email_box);
-        String userEmail = emailField.getText().toString();
 
         // Create Quiz Results and open Email app
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -281,22 +313,11 @@ public class MainActivity extends AppCompatActivity {
         isQ2Correct = false;
 
         // Which boxes have been checked?
-        CheckBox q2a1CheckBox = (CheckBox) findViewById(R.id.q2a1);
         boolean q2a1CheckBoxChecked = q2a1CheckBox.isChecked();
-
-        CheckBox q2a2CheckBox = (CheckBox) findViewById(R.id.q2a2);
         boolean q2a2CheckBoxChecked = q2a2CheckBox.isChecked();
-
-        CheckBox q2a3CheckBox = (CheckBox) findViewById(R.id.q2a3);
         boolean q2a3CheckBoxChecked = q2a3CheckBox.isChecked();
-
-        CheckBox q2a4CheckBox = (CheckBox) findViewById(R.id.q2a4);
         boolean q2a4CheckBoxChecked = q2a4CheckBox.isChecked();
-
-        CheckBox q2a5CheckBox = (CheckBox) findViewById(R.id.q2a5);
         boolean q2a5CheckBoxChecked = q2a5CheckBox.isChecked();
-
-        CheckBox q2a6CheckBox = (CheckBox) findViewById(R.id.q2a6);
         boolean q2a6CheckBoxChecked = q2a6CheckBox.isChecked();
 
         if (q2a2CheckBoxChecked && q2a4CheckBoxChecked) {
@@ -335,8 +356,6 @@ public class MainActivity extends AppCompatActivity {
         isQ3Correct = false;
 
         // Get number user clicked to
-        TextView quantityTextView = (TextView) findViewById(
-                R.id.q3a);
         quantityTextView.setText("" + q3Quantity);
 
         if (q3Quantity == 8) {
@@ -374,8 +393,6 @@ public class MainActivity extends AppCompatActivity {
         isQ4Correct = false;
 
         // Get string from field
-        editMascotName = (EditText) findViewById(R.id.q4a1);
-        String q4Answer = editMascotName.getText().toString();
         if (q4Answer.equalsIgnoreCase("Bugdroid") ||
                 q4Answer.equalsIgnoreCase("Bugdroid ") ||
                 q4Answer.equalsIgnoreCase("Andy") ||
