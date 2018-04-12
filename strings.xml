@@ -17,6 +17,9 @@
     <string name="question_3_text">How many major versions of Android have been released as of January 2018?</string>
     <string name="question_4_text">What is the name of Android\'s mascot?</string>
 
+    <string name="question_3_min_toast">You have at least one version of Android in your hands right now!</string>
+    <string name="question_3_max_toast">There are only 26 letters in the alphabet ;)</string>
+
     <string name="question_1_result">Question 1 Correct?</string>
     <string name="question_2_result">Question 2 Correct?</string>
     <string name="question_3_result">Question 3 Correct?</string>
