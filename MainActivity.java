@@ -26,19 +26,19 @@ public class MainActivity extends AppCompatActivity {
     int numberOfCompletedQuestions = 0;
     float score = 0;
 
-    private boolean isQ1Correct = false;
-    private boolean isQ2Correct = false;
-    private boolean isQ3Correct = false;
-    private boolean isQ4Correct = false;
+    boolean isQ1Correct = false;
+    boolean isQ2Correct = false;
+    boolean isQ3Correct = false;
+    boolean isQ4Correct = false;
 
-    private boolean q1HintUsed = false;
-    private boolean q2HintUsed = false;
-    private boolean q3HintUsed = false;
-    private boolean q4HintUsed = false;
+    boolean q1HintUsed = false;
+    boolean q2HintUsed = false;
+    boolean q3HintUsed = false;
+    boolean q4HintUsed = false;
 
-    private int q3Quantity = 0;
+    int q3Quantity = 0;
 
-    private EditText editMascotName;
+    EditText editMascotName;
 
 
     @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Set Methods
+    // Set methods
 
     /**
      * This method is called to
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         q3Quantity = q3Quantity + 1;
         if (q3Quantity > 26) {
             q3Quantity = 26;
-            Toast.makeText(this, "There are only 26 letters in the alphabet ;)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.question_3_max_toast), Toast.LENGTH_SHORT).show();
         }
         displayQ3Answer(q3Quantity);
     }
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         q3Quantity = q3Quantity - 1;
         if (q3Quantity < 1) {
             q3Quantity = 1;
-            Toast.makeText(this, "You're using at least one version of Android right now.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.question_3_min_toast), Toast.LENGTH_SHORT).show();
         }
         displayQ3Answer(q3Quantity);
     }
